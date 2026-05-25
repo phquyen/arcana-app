@@ -1,5 +1,5 @@
 from datetime import datetime
-from profiles.data import SIGNS_DATA
+from data import SIGNS_DATA
 
 def sun_sign_from_birthday(birthday: datetime) -> str:
     """

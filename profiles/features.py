@@ -4,13 +4,11 @@ Builds the full AstroFeatures object from a birthday.
 This is the public interface of the astro branch. Other parts of the
 pipeline import only `extract_astro_features` and don't care how it works.
 """
-
-from profiles.birthday_sign_connect import sun_sign_from_birthday
-from profiles.data import SIGNS_DATA
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from birthday_sign_connect import sun_sign_from_birthday
+from data import SIGNS_DATA
 from schema import AstroFeatures
-
-
-
 
 
 def extract_astro_features(birthday: str) -> AstroFeatures:
