@@ -42,12 +42,35 @@ class AstroFeatures(BaseModel):
 
 # ── Card branch (Phase 3 placeholder) ────────────────────────────────────────
 
-class CardFeatures(BaseModel):
-    """Output of the tarot card branch."""
-    name: str
-    orientation: str        # upright | reversed
-    arcana: str = "PLACEHOLDER"
+class PositionedCard(BaseModel):
+    """A single card in a specific position in the spread."""
+    
+    # Identity
+    card_id: str  # e.g. "major_16"
+    name: str  # canonical name, e.g. "The Tower"
+    arcana: str  # "major" or "minor"
+    orientation: str  # "upright" or "reversed"
+    
+    # Position in spread
+    position: str  # "past", "present", or "future"
+    position_index: int  # 0, 1, or 2
+    user_picked_slot: int  # which of the 10 face-down slots the user clicked (1-10)
+    
+    # Interpretation (filled by extract_card_features)
+    keywords: list[str] = Field(default_factory=list)
+    core_meaning: str = ""
+    context_meaning: str = ""  # the meaning interpreted for the user's context
 
+
+class SpreadFeatures(BaseModel):
+    """Output of the cards branch — a three-card past/present/future spread."""
+    
+    cards: list[PositionedCard]  # always length 3, in order: past, present, future
+    
+    # Provenance — for reproducibility
+    shuffle_seed: int  # the random seed used; lets you reproduce the shuffle
+    layout: list[str]  # the 10 card names that were laid out (in order)
+    user_picks: list[int]  # the 3 slot numbers the user picked (1-10)
 
 # ── Question / NLP branch (Phase 2 placeholder) ──────────────────────────────
 
@@ -71,6 +94,6 @@ class Profile(BaseModel):
     timestamp: datetime
     inputs: InputRecord
     astro: AstroFeatures
-    card: CardFeatures
+    card: SpreadFeatures
     question: Optional[QuestionFeatures] = None
     derived: DerivedTraits

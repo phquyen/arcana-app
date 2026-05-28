@@ -1,0 +1,94 @@
+{
+  "description": "Maps card name variants found in external datasets to canonical RWS names used in deck.json. Lowercase, stripped. Covers Marseille tradition + common spelling variants.",
+  
+  "mappings": {
+    "the fool": "The Fool",
+    "fool": "The Fool",
+    "le mat": "The Fool",
+    
+    "the magician": "The Magician",
+    "magician": "The Magician",
+    "le bateleur": "The Magician",
+    
+    "the popess": "The High Priestess",
+    "the high priestess": "The High Priestess",
+    "high priestess": "The High Priestess",
+    "la papesse": "The High Priestess",
+    
+    "the empress": "The Empress",
+    "empress": "The Empress",
+    "l'imperatrice": "The Empress",
+    
+    "the emperor": "The Emperor",
+    "emperor": "The Emperor",
+    "l'empereur": "The Emperor",
+    
+    "the pope": "The Hierophant",
+    "the hierophant": "The Hierophant",
+    "hierophant": "The Hierophant",
+    "le pape": "The Hierophant",
+    
+    "the lover": "The Lovers",
+    "the lovers": "The Lovers",
+    "lovers": "The Lovers",
+    "l'amoureux": "The Lovers",
+    
+    "the chariot": "The Chariot",
+    "chariot": "The Chariot",
+    "le chariot": "The Chariot",
+    
+    "the force": "Strength",
+    "strength": "Strength",
+    "la force": "Strength",
+    
+    "the hermit": "The Hermit",
+    "hermit": "The Hermit",
+    "l'ermite": "The Hermit",
+    
+    "the pendulum": "Wheel of Fortune",
+    "wheel of fortune": "Wheel of Fortune",
+    "the wheel of fortune": "Wheel of Fortune",
+    "la roue de fortune": "Wheel of Fortune",
+    
+    "justice": "Justice",
+    "la justice": "Justice",
+    
+    "the hanged man": "The Hanged Man",
+    "hanged man": "The Hanged Man",
+    "le pendu": "The Hanged Man",
+    
+    "death": "Death",
+    "la mort": "Death",
+    
+    "temperance": "Temperance",
+    "la temperance": "Temperance",
+    
+    "the devil": "The Devil",
+    "devil": "The Devil",
+    "le diable": "The Devil",
+    
+    "the tower": "The Tower",
+    "tower": "The Tower",
+    "la maison dieu": "The Tower",
+    
+    "the star": "The Star",
+    "star": "The Star",
+    "l'etoile": "The Star",
+    
+    "the moon": "The Moon",
+    "moon": "The Moon",
+    "la lune": "The Moon",
+    
+    "the sun": "The Sun",
+    "sun": "The Sun",
+    "le soleil": "The Sun",
+    
+    "judgement": "Judgement",
+    "judgment": "Judgement",
+    "le jugement": "Judgement",
+    
+    "the world": "The World",
+    "world": "The World",
+    "le monde": "The World"
+  }
+}
